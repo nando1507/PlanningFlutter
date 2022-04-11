@@ -12,9 +12,12 @@ class cartao extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.album),
+            ListTile(
+              leading: const Icon(Icons.album),
               title: Text(tamanho),
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
