@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planningpoker/constants.dart';
 
 class cartao extends StatelessWidget {
   final String tamanho;
@@ -7,32 +8,60 @@ class cartao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Card(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            ListTile(
-              leading: const Icon(Icons.album),
-              title: Text(tamanho),
-            ),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+      child: InkWell(
+        splashColor: Colors.blue.withAlpha(0),
+        onTap: () {
+          debugPrint(tamanho);
+        },
+        child: SizedBox(
+          width: 100,
+          height: 208,
+          child: Card(
+            borderOnForeground: true,
+            elevation: 1,
+            color: Colors.white.withAlpha(0),
+            shadowColor: Colors.white,
+            child: Column(
               children: <Widget>[
-                TextButton(
-                  child: Text(tamanho),
-                  onPressed: () {/* ... */},
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Text(tamanho),
+                  ],
                 ),
                 const SizedBox(
-                  width: 8,
-                  height: 8,
+                  height: defaultPadding * 4,
+                  width: defaultPadding,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      tamanho,
+                      style: const TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: defaultPadding * 4,
+                  width: defaultPadding,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Text(tamanho),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

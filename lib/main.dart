@@ -53,8 +53,25 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const cartao(
-              tamanho: 'P',
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const <Widget>[
+                cartao(
+                  tamanho: 'PP',
+                ),
+                cartao(
+                  tamanho: 'P',
+                ),
+                cartao(
+                  tamanho: 'M',
+                ),
+                cartao(
+                  tamanho: 'G',
+                ),
+                cartao(
+                  tamanho: 'GG',
+                ),
+              ],
             ),
             const Text(
               'Pressione o Botão',
