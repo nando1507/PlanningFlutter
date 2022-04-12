@@ -9,10 +9,10 @@ const amarelo = Color(0xFFFBC02D);
 const vermelho = Color(0xFFD32F2F);
 const branco = Colors.white70;
 const verde = Color(0xFF388E3C);
-const rosa = Color(0xFF3C51162);
 
 //espaçamento
 const double defaultPadding = 16.0;
 
 //Imagens
 const String fundp = "assets/images/mesa.jpg";
+const String tShirt = "assets/images/tshirt.png";

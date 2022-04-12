@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class planning extends StatelessWidget {
-  const planning({Key? key}) : super(key: key);
+class Planning extends StatelessWidget {
+  const Planning({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

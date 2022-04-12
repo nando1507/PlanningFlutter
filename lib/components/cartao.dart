@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:planningpoker/constants.dart';
 
-class cartao extends StatelessWidget {
+class Cartao extends StatelessWidget {
   final String tamanho;
-  const cartao({Key? key, required this.tamanho}) : super(key: key);
+
+  const Cartao({Key? key, required this.tamanho}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Size _size = MediaQuery.of(context).size;
+    //print((_size.width * 0.10));
+    //print((_size.height * 0.25));
     return Center(
       child: InkWell(
         splashColor: Colors.blue.withAlpha(0),
@@ -14,27 +18,32 @@ class cartao extends StatelessWidget {
           debugPrint(tamanho);
         },
         child: SizedBox(
-          width: 100,
-          height: 208,
+          width: (_size.width * 0.10),
+          height: (_size.height * 0.28),
           child: Card(
+            margin: const EdgeInsets.all(defaultPadding),
             borderOnForeground: true,
             elevation: 1,
-            color: Colors.white.withAlpha(0),
+            color: Colors.white,
             shadowColor: Colors.white,
             child: Column(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
+                  //mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    Text(tamanho),
+                    Text(
+                      " " + tamanho,
+                      style: const TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
-                const SizedBox(
-                  height: defaultPadding * 4,
-                  width: defaultPadding,
-                ),
+                const Expanded(child: Text(""), flex: 5),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -42,21 +51,24 @@ class cartao extends StatelessWidget {
                     Text(
                       tamanho,
                       style: const TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
+                        fontSize: 40.0,
+                        color: Colors.black,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: defaultPadding * 4,
-                  width: defaultPadding,
-                ),
+                const Expanded(child: Text(""), flex: 5),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    Text(tamanho),
+                    Text(
+                      tamanho + " ",
+                      style: const TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
               ],

@@ -53,40 +53,58 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Expanded(
+              child: Text(""),
+              flex: 5,
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    color: verde,
+                    borderRadius: BorderRadius.circular(defaultPadding),
+                    border: Border(
+                      left: BorderSide(
+                        //
+                        color: Colors.white,
+                        width: 3.0,
+                      ),
+                      top: BorderSide(
+                        //
+                        color: Colors.white,
+                        width: 3.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const Expanded(
+              child: Text(""),
+              flex: 5,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const <Widget>[
-                cartao(
+                Cartao(
                   tamanho: 'PP',
                 ),
-                cartao(
+                Cartao(
                   tamanho: 'P',
                 ),
-                cartao(
+                Cartao(
                   tamanho: 'M',
                 ),
-                cartao(
+                Cartao(
                   tamanho: 'G',
                 ),
-                cartao(
+                Cartao(
                   tamanho: 'GG',
                 ),
               ],
             ),
-            const Text(
-              'Pressione o Botão',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
