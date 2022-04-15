@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MenuController extends ChangeNotifier {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
-  void controlMenu() {}
+class Navegador extends StatelessWidget {
+  final Widget navegar;
+  const Navegador({Key? key, required this.navegar}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Navigator(
+        // pages: [
+        //   Navigator.of(context).push(
+        //     MaterialPageRoute(
+        //       builder: (context) => navegar,
+        //     ),
+        //   )
+        // ],
+        );
+  }
 }

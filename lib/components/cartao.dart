@@ -9,8 +9,8 @@ class Cartao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    //print((_size.width * 0.10));
-    //print((_size.height * 0.25));
+    print("width: " + (_size.width * 0.10).toString());
+    print("height: " + (_size.height * 0.28).toString());
     return Center(
       child: InkWell(
         splashColor: Colors.blue.withAlpha(100),

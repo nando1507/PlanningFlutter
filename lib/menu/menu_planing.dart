@@ -32,6 +32,13 @@ class Menu extends StatelessWidget {
             },
           ),
           DrawerListTile(
+            icone: Icons.account_box,
+            title: 'Gestão de Acesso',
+            press: () {
+              print('Gestão de Acessos');
+            },
+          ),
+          DrawerListTile(
             icone: Icons.badge_rounded,
             title: 'Sobre o Time',
             press: () {
