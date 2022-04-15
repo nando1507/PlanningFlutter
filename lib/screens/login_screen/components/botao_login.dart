@@ -7,12 +7,14 @@ class BotaoLogin extends StatelessWidget {
   final String entrada;
   final IconData icone;
   final Color cor;
+  final Widget navegar;
 
   const BotaoLogin({
     Key? key,
     required this.entrada,
     required this.icone,
     required this.cor,
+    required this.navegar,
   }) : super(key: key);
 
   @override
@@ -33,7 +35,11 @@ class BotaoLogin extends StatelessWidget {
         ),
         icon: Icon(icone, color: cor),
         onPressed: () {
-          print(entrada);
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => navegar,
+            ),
+          );
         },
       ),
     );

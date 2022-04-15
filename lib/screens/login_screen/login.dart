@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planningpoker/constants.dart';
-import 'package:planningpoker/screens/login_screen/components/botao.dart';
+import 'package:planningpoker/screens/login_screen/components/botao_login.dart';
+import 'package:planningpoker/screens/planning_screen/planning_screen.dart';
 import 'components/campo_texto.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   //height: 150.0,
                   child: Image.asset(
-                    Logo,
+                    logo,
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -36,7 +37,14 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 25.0),
                 const CampoTexto(entrada: "Password", ocultar: true, icone: Icons.password),
                 const SizedBox(height: 30.0),
-                const BotaoLogin(entrada: "Login", icone: Icons.arrow_forward, cor: Colors.white),
+                const BotaoLogin(
+                  entrada: "Login",
+                  icone: Icons.arrow_forward,
+                  cor: Colors.white,
+                  navegar: PlanningScreen(
+                    entrada: "Planning",
+                  ),
+                ),
               ],
             ),
           ),

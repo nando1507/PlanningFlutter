@@ -21,7 +21,7 @@ class CampoTexto extends StatelessWidget {
       obscureText: ocultar,
       style: style,
       decoration: InputDecoration(
-        icon: Icon(icone),
+        prefixIcon: Icon(icone),
         contentPadding: const EdgeInsets.all(defaultPadding),
         hintText: entrada,
         border: OutlineInputBorder(
