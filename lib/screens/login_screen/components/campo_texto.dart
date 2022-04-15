@@ -6,11 +6,13 @@ TextStyle style = const TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 class CampoTexto extends StatelessWidget {
   final String entrada;
   final bool ocultar;
+  final IconData icone;
 
   const CampoTexto({
     Key? key,
     required this.entrada,
     required this.ocultar,
+    required this.icone,
   }) : super(key: key);
 
   @override
@@ -19,6 +21,7 @@ class CampoTexto extends StatelessWidget {
       obscureText: ocultar,
       style: style,
       decoration: InputDecoration(
+        icon: Icon(icone),
         contentPadding: const EdgeInsets.all(defaultPadding),
         hintText: entrada,
         border: OutlineInputBorder(

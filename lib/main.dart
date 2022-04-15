@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:planningpoker/Screens/loginscreen/login.dart';
+import 'package:planningpoker/Screens/login_screen/login.dart';
 import 'package:planningpoker/constants.dart';
-
-import 'menu/menu_planing.dart';
+import 'Screens/planning_screen/planning_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,21 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const Menu(),
-      appBar: AppBar(
-        title: Text(widget.title),
-
-        // leading: IconButton(
-        //   icon: const Icon(Icons.exit_to_app),
-        //   onPressed: () {
-        //     Scaffold.of(context).openDrawer();
-        //   },
-        //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-        // ),
-      ),
-      //body: const PlanningScreen(),
-      body: const LoginScreen(),
-    );
+    return LoginScreen(entrada: widget.title);
+    //return PlanningScreen(entrada: widget.title);
   }
 }
