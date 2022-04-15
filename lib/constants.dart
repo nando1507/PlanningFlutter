@@ -16,3 +16,4 @@ const double defaultPadding = 16.0;
 //Imagens
 const String fundp = "assets/images/mesa.jpg";
 const String tShirt = "assets/images/tshirt.png";
+const String Logo = "images/ic_launcher.png";

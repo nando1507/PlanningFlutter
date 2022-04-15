@@ -13,7 +13,7 @@ class Cartao extends StatelessWidget {
     //print((_size.height * 0.25));
     return Center(
       child: InkWell(
-        splashColor: Colors.blue.withAlpha(0),
+        splashColor: Colors.blue.withAlpha(100),
         onTap: () {
           debugPrint(tamanho);
         },
@@ -22,10 +22,9 @@ class Cartao extends StatelessWidget {
           height: (_size.height * 0.28),
           child: Card(
             margin: const EdgeInsets.all(defaultPadding),
-            borderOnForeground: true,
+            //borderOnForeground: true,
             elevation: 1,
             color: Colors.white,
-            shadowColor: Colors.white,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[

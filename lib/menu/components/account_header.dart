@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/constants.dart';
 
 class AccountHeader extends StatelessWidget {
   final String contaUsuario;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:planningpoker/components/cartao.dart';
+import 'package:planningpoker/Screens/loginscreen/login.dart';
 import 'package:planningpoker/constants.dart';
 
 import 'menu/menu_planing.dart';
@@ -35,77 +35,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Menu(),
       appBar: AppBar(
         title: Text(widget.title),
+
+        // leading: IconButton(
+        //   icon: const Icon(Icons.exit_to_app),
+        //   onPressed: () {
+        //     Scaffold.of(context).openDrawer();
+        //   },
+        //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        // ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Expanded(
-              child: Text(""),
-              flex: 5,
-            ),
-            Row(
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    color: verde,
-                    borderRadius: BorderRadius.circular(defaultPadding),
-                    border: Border(
-                      left: BorderSide(
-                        //
-                        color: Colors.white,
-                        width: 3.0,
-                      ),
-                      top: BorderSide(
-                        //
-                        color: Colors.white,
-                        width: 3.0,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Expanded(
-              child: Text(""),
-              flex: 5,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Cartao(
-                  tamanho: 'PP',
-                ),
-                Cartao(
-                  tamanho: 'P',
-                ),
-                Cartao(
-                  tamanho: 'M',
-                ),
-                Cartao(
-                  tamanho: 'G',
-                ),
-                Cartao(
-                  tamanho: 'GG',
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      //body: const PlanningScreen(),
+      body: const LoginScreen(),
     );
   }
 }
