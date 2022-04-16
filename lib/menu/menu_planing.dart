@@ -31,17 +31,23 @@ class Menu extends StatelessWidget {
           DrawerListTile(
             icone: Icons.account_tree_sharp,
             title: 'Retrospectiva',
-            press: RetrospectivaScreen(),
+            press: RetrospectivaScreen(
+              entrada: 'Retrospectiva',
+            ),
           ),
           DrawerListTile(
             icone: Icons.account_box,
             title: 'Gestão de Acesso',
-            press: AdminScreen(),
+            press: AdminScreen(
+              entrada: 'Gestão de Acesso',
+            ),
           ),
           DrawerListTile(
             icone: Icons.badge_rounded,
             title: 'Sobre o Time',
-            press: AboutScreen(),
+            press: AboutScreen(
+              entrada: 'Sobre o Time',
+            ),
           ),
         ],
       ),

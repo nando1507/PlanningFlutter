@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:planningpoker/menu/menu_planing.dart';
 
 class RetrospectivaScreen extends StatelessWidget {
-  const RetrospectivaScreen({Key? key}) : super(key: key);
+  final String entrada;
+
+  const RetrospectivaScreen({Key? key, required this.entrada}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      drawer: const Menu(),
+      appBar: AppBar(
+        title: Text(entrada),
+      ),
+      body: Center(
+          child: Column(
+        children: const <Widget>[
+          Text(
+            "Retrospec Panel",
+          ),
+        ],
+      )),
+    );
   }
 }

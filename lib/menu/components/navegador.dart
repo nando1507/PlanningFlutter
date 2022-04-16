@@ -6,7 +6,7 @@ class Navegador extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Navigator(
+    return const Navigator(
         // pages: [
         // Navigator.of(context).push(
         //   MaterialPageRoute(
