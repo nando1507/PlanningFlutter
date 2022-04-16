@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/constants.dart';
+import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/screens/login_screen/components/botao_login.dart';
 import 'package:planningpoker/screens/planning_screen/planning_screen.dart';
 import 'components/campo_texto.dart';

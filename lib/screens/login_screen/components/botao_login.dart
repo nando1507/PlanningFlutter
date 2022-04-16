@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/constants.dart';
+import 'package:planningpoker/components/constants.dart';
 
 TextStyle style = const TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planningpoker/Screens/login_screen/login.dart';
-import 'package:planningpoker/constants.dart';
-import 'Screens/planning_screen/planning_screen.dart';
+import 'package:planningpoker/components/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +36,5 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return LoginScreen(entrada: widget.title);
-    //return PlanningScreen(entrada: widget.title);
   }
 }

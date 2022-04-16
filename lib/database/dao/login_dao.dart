@@ -44,7 +44,7 @@ class LoginDao {
   }
 
   List<Login> _toList(List<Map<String, dynamic>> resultado) {
-    final List<Login> ListUsers = [];
+    final List<Login> listUsers = [];
     for (Map<String, dynamic> row in resultado) {
       final Login users = Login(
         row[_id],
@@ -53,8 +53,8 @@ class LoginDao {
         row[_nome],
         row[_dataCadastro],
       );
-      ListUsers.add(users);
+      listUsers.add(users);
     }
-    return ListUsers;
+    return listUsers;
   }
 }

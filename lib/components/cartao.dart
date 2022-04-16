@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/constants.dart';
+import 'package:planningpoker/components/constants.dart';
 
 class Cartao extends StatelessWidget {
   final String tamanho;
@@ -9,8 +9,8 @@ class Cartao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    print("width: " + (_size.width * 0.10).toString());
-    print("height: " + (_size.height * 0.28).toString());
+    // print("width: " + (_size.width * 0.10).toString());
+    // print("height: " + (_size.height * 0.28).toString());
     return Center(
       child: InkWell(
         splashColor: Colors.blue.withAlpha(100),

@@ -8,11 +8,11 @@ class Navegador extends StatelessWidget {
   Widget build(BuildContext context) {
     return Navigator(
         // pages: [
-        //   Navigator.of(context).push(
-        //     MaterialPageRoute(
-        //       builder: (context) => navegar,
-        //     ),
-        //   )
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => navegar,
+        //   ),
+        // )
         // ],
         );
   }
