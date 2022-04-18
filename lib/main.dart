@@ -2,9 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planningpoker/Screens/login_screen/login.dart';
 import 'package:planningpoker/components/constants.dart';
+import 'package:planningpoker/models/login.dart';
+import 'package:planningpoker/database/dao/login_dao.dart';
 
 void main() {
   runApp(const MyApp());
+
+  LoginDao logDao;
+
+  var login = Login(0, "ADMIN", "ADMIN", "Bareno", DateTime.now());
+
+// var save = logDao.save(login);
+
+  // .then(id){
+  //    findAll().then((login) => debugPrint(login.tostring()));
+  //  };
 }
 
 class MyApp extends StatelessWidget {
@@ -35,6 +47,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    //if (LoginDao.Logar(Emai)) {}
     return LoginScreen(entrada: widget.title);
   }
 }

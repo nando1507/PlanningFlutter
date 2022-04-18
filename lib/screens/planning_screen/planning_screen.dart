@@ -34,7 +34,7 @@ class PlanningScreen extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 // CarouselSlider.builder(
                 //   itemCount: itens.length,
                 //   itemBuilder: (context, itemIndex, realIndex) {
