@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
 class RetrospectivaScreen extends StatelessWidget {
@@ -18,6 +19,11 @@ class RetrospectivaScreen extends StatelessWidget {
         children: const <Widget>[
           Text(
             "Retrospec Panel",
+          ),
+          Center(
+            child: CircularProgressIndicator(
+              color: azul,
+            ),
           ),
         ],
       )),

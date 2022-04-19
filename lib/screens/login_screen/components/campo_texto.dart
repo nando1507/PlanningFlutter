@@ -7,12 +7,14 @@ class CampoTexto extends StatelessWidget {
   final String entrada;
   final bool ocultar;
   final IconData icone;
+  final TextEditingController controllerEntrada;
 
   const CampoTexto({
     Key? key,
     required this.entrada,
     required this.ocultar,
     required this.icone,
+    required this.controllerEntrada,
   }) : super(key: key);
 
   @override

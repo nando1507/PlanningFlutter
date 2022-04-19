@@ -12,6 +12,6 @@ Future<Database> getDatabase() async {
       print(LoginDao.tableContactSql);
     },
     version: 1,
-    //onDowngrade: onDatabaseDowngradeDelete,
+    onDowngrade: onDatabaseDowngradeDelete,
   );
 }

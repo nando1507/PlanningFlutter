@@ -8,15 +8,17 @@ import 'package:planningpoker/database/dao/login_dao.dart';
 void main() {
   runApp(const MyApp());
 
-  LoginDao logDao;
+  LoginDao logDao = LoginDao();
 
-  var login = Login(0, "ADMIN", "ADMIN", "Bareno", DateTime.now());
+  Login login = Login(
+    0,
+    "ADMIN",
+    "ADMIN",
+    "Bareno",
+    DateTime.now(),
+  );
 
-// var save = logDao.save(login);
-
-  // .then(id){
-  //    findAll().then((login) => debugPrint(login.tostring()));
-  //  };
+  logDao.salvar(login);
 }
 
 class MyApp extends StatelessWidget {

@@ -11,6 +11,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
+    final TextEditingController _usuarioController = TextEditingController();
+    final TextEditingController _senhaController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -33,11 +35,23 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40.0),
-                const CampoTexto(entrada: "Email", ocultar: false, icone: Icons.email),
+                CampoTexto(
+                  entrada: "Email",
+                  ocultar: false,
+                  icone: Icons.email,
+                  controllerEntrada: _usuarioController,
+                ),
                 const SizedBox(height: 25.0),
-                const CampoTexto(entrada: "Password", ocultar: true, icone: Icons.password),
+                CampoTexto(
+                  entrada: "Password",
+                  ocultar: true,
+                  icone: Icons.password,
+                  controllerEntrada: _senhaController,
+                ),
                 const SizedBox(height: 30.0),
                 const BotaoLogin(
+                  usuario: _usuarioController.text,
+                  senha: _senhaController.text,
                   entrada: "Login",
                   icone: Icons.arrow_forward,
                   cor: Colors.white,

@@ -19,13 +19,13 @@ class LoginDao {
       '$_dataCadastro DateTime '
       ')';
 
-  Future<int> save(Login login) async {
+  Future<int> salvar(Login login) async {
     final Database db = await getDatabase();
-    Map<String, dynamic> usersMap = _toMap(login);
+    Map<String, dynamic> usersMap = _mapear(login);
     return db.insert(_tableName, usersMap);
   }
 
-  Map<String, dynamic> _toMap(Login login) {
+  Map<String, dynamic> _mapear(Login login) {
     final Map<String, dynamic> usersMap = {};
     usersMap[_id] = login.id;
     usersMap[_usuario] = login.usuario;
@@ -36,14 +36,14 @@ class LoginDao {
     return usersMap;
   }
 
-  Future<List<Login>> findAll() async {
+  Future<List<Login>> buscarTodos() async {
     final Database db = await getDatabase();
     final List<Map<String, dynamic>> resultado = await db.query(_tableName);
-    List<Login> users = _toList(resultado);
+    List<Login> users = _listar(resultado);
     return users;
   }
 
-  List<Login> _toList(List<Map<String, dynamic>> resultado) {
+  List<Login> _listar(List<Map<String, dynamic>> resultado) {
     final List<Login> listUsers = [];
     for (Map<String, dynamic> row in resultado) {
       final Login users = Login(
@@ -61,7 +61,7 @@ class LoginDao {
   Future<String> Logar(String usuario, String Senha) async {
     final Database db = await getDatabase();
     final List<Map<String, dynamic>> resultado = await db.query(_tableName);
-    List<Login> users = _toList(resultado);
+    List<Login> users = _listar(resultado);
     // for (int i = 0; i < users.length; i++) {
     //   if (users[i].usuario == usuario && users[i].senha == Senha) {
     var aux = db

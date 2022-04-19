@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -17,6 +18,11 @@ class AboutScreen extends StatelessWidget {
         children: const <Widget>[
           Text(
             "About Panel",
+          ),
+          Center(
+            child: CircularProgressIndicator(
+              color: amarelo,
+            ),
           ),
         ],
       )),
