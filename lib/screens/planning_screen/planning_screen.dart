@@ -1,5 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:planningpoker/components/cartao.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
@@ -32,38 +32,28 @@ class PlanningScreen extends StatelessWidget {
               child: Text(""),
               flex: 5,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                // CarouselSlider.builder(
-                //   itemCount: itens.length,
-                //   itemBuilder: (context, itemIndex, realIndex) {
-                //     return Padding(
-                //       padding: const EdgeInsets.all(8.0),
-                //       child: Text(itens[itemIndex]),
-                //     );
-                //   },
-                //   options: CarouselOptions(
-                //     height: 100.0,
-                //     autoPlay: true,
-                //   ),
-                // ),
-                Cartao(
-                  tamanho: 'PP',
-                ),
-                Cartao(
-                  tamanho: 'P',
-                ),
-                Cartao(
-                  tamanho: 'M',
-                ),
-                Cartao(
-                  tamanho: 'G',
-                ),
-                Cartao(
-                  tamanho: 'GG',
-                ),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const <Widget>[
+                  Cartao(
+                    tamanho: 'PP',
+                  ),
+                  Cartao(
+                    tamanho: 'P',
+                  ),
+                  Cartao(
+                    tamanho: 'M',
+                  ),
+                  Cartao(
+                    tamanho: 'G',
+                  ),
+                  Cartao(
+                    tamanho: 'GG',
+                  ),
+                ],
+              ),
             ),
           ],
         ),

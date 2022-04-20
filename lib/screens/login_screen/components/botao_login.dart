@@ -10,17 +10,17 @@ class BotaoLogin extends StatelessWidget {
   final IconData icone;
   final Color cor;
   final Widget navegar;
-  final String? usuario;
-  final String? senha;
+  final String usuario;
+  final String senha;
 
-  const BotaoLogin(
-    this.senha,
-    this.usuario, {
+  const BotaoLogin({
     Key? key,
     required this.entrada,
     required this.icone,
     required this.cor,
     required this.navegar,
+    required this.senha,
+    required this.usuario,
   }) : super(key: key);
 
   @override
@@ -41,15 +41,18 @@ class BotaoLogin extends StatelessWidget {
         ),
         icon: Icon(icone, color: cor),
         onPressed: () {
-          // dao.Logar(this.usuario, this.senha).then((value) => (
-
-          // ));
-
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => navegar,
             ),
           );
+          // dao.Logar(usuario, senha).then((value) => {
+          //       Navigator.of(context).push(
+          //         MaterialPageRoute(
+          //           builder: (context) => navegar,
+          //         ),
+          //       ),
+          //     });
         },
       ),
     );
