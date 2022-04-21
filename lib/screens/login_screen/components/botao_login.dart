@@ -46,7 +46,7 @@ class BotaoLogin extends StatelessWidget {
               builder: (context) => navegar,
             ),
           );
-          // dao.Logar(usuario, senha).then((value) => {
+          // dao.logar(usuario, senha).then((value) => {
           //       Navigator.of(context).push(
           //         MaterialPageRoute(
           //           builder: (context) => navegar,

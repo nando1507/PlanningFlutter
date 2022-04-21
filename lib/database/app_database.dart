@@ -4,7 +4,9 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 Future<Database> getDatabase() async {
-  final String path = join(await getDatabasesPath(), 'planningPoker.db');
+  var databasesPath = await getDatabasesPath();
+
+  final String path = join(databasesPath, 'planningPoker.db');
   return openDatabase(
     path,
     onCreate: (db, version) {

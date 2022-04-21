@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:planningpoker/components/cartao.dart';
+import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
 class PlanningScreen extends StatelessWidget {
@@ -14,6 +14,17 @@ class PlanningScreen extends StatelessWidget {
       drawer: const Menu(),
       appBar: AppBar(
         title: Text(entrada),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(defaultPadding),
+            child: InkWell(
+              onTap: () {
+                print('Sair');
+              },
+              child: const Icon(Icons.exit_to_app),
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -37,6 +48,11 @@ class PlanningScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
+                  // for (var item in itens) {
+                  //    Cartao(tamanho: item.toString(),
+                  // );
+                  // }
+
                   Cartao(
                     tamanho: 'PP',
                   ),

@@ -58,10 +58,10 @@ class LoginDao {
     return listUsers;
   }
 
-  Future<String> Logar(String usuario, String Senha) async {
+  Future<String> logar(String usuario, String Senha) async {
     final Database db = await getDatabase();
-    final List<Map<String, dynamic>> resultado = await db.query(_tableName);
-    List<Login> users = _listar(resultado);
+    //final List<Map<String, dynamic>> resultado = await db.query(_tableName);
+    //List<Login> users = _listar(resultado);
     // for (int i = 0; i < users.length; i++) {
     //   if (users[i].usuario == usuario && users[i].senha == Senha) {
     var aux = db
