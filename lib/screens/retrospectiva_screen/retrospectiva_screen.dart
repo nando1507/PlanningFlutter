@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/Screens/login_screen/login.dart';
+import 'package:planningpoker/components/appbar.dart';
 import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
@@ -12,39 +12,21 @@ class RetrospectivaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Menu(),
-      appBar: AppBar(
-        title: Text(entrada),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(defaultPadding),
-            child: InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(entrada: "Planning"),
-                  ),
-                );
-
-                print('Sair');
-              },
-              child: const Icon(Icons.exit_to_app_sharp),
-            ),
-          ),
-        ],
+      appBar: AppBarPadrao(
+        entrada: entrada,
       ),
       body: Center(
-          child: Column(
-        children: const <Widget>[
-          Text(
-            "Retrospec Panel",
-          ),
-          Center(
-            child: CircularProgressIndicator(
-              color: azul,
+        child: Column(
+          children: const <Widget>[
+            Expanded(child: Text(""), flex: 5),
+            Text("Retrospec Panel"),
+            Center(
+              child: CircularProgressIndicator(color: azul),
             ),
-          ),
-        ],
-      )),
+            Expanded(child: Text(""), flex: 5),
+          ],
+        ),
+      ),
     );
   }
 }

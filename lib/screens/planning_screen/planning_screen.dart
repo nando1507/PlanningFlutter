@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planningpoker/Screens/login_screen/login.dart';
+import 'package:planningpoker/components/appbar.dart';
 import 'package:planningpoker/components/cartao.dart';
-import 'package:planningpoker/components/constants.dart';
 import 'package:planningpoker/menu/menu_planing.dart';
 
 class PlanningScreen extends StatelessWidget {
@@ -10,37 +9,11 @@ class PlanningScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var itens = ["PP", "P", "M", "G", "GG"];
+    //var itens = ["PP", "P", "M", "G", "GG"];
     return Scaffold(
       drawer: const Menu(),
-      appBar: AppBar(
-        title: Text(entrada),
-        actions: [
-          // CloseButton(
-          //   onPressed: () => {
-          //     Navigator.of(context).push(
-          //       MaterialPageRoute(
-          //         builder: (context) => const LoginScreen(entrada: "Planning"),
-          //       ),
-          //     ),
-          //   },
-          // ),
-          Padding(
-            padding: const EdgeInsets.all(defaultPadding),
-            child: InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(entrada: "Planning"),
-                  ),
-                );
-
-                print('Sair');
-              },
-              child: const Icon(Icons.exit_to_app_sharp),
-            ),
-          ),
-        ],
+      appBar: AppBarPadrao(
+        entrada: entrada,
       ),
       body: Center(
         child: Column(
@@ -64,11 +37,6 @@ class PlanningScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
-                  // for (var item in itens) {
-                  //    Cartao(tamanho: item.toString(),
-                  // );
-                  // }
-
                   Cartao(
                     tamanho: 'PP',
                   ),

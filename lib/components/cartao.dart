@@ -18,8 +18,8 @@ class Cartao extends StatelessWidget {
           debugPrint(tamanho);
         },
         child: SizedBox(
-          width: (_size.width * 0.10),
-          height: (_size.height * 0.28),
+          width: (_size.width * 0.10) < 192 ? 192 : (_size.width * 0.10),
+          height: (_size.height * 0.28) < 269 ? 269 : (_size.height * 0.28),
           child: Card(
             margin: const EdgeInsets.all(defaultPadding),
             //borderOnForeground: true,

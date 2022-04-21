@@ -58,7 +58,7 @@ class LoginDao {
     return listUsers;
   }
 
-  Future<String> logar(String usuario, String Senha) async {
+  Future<String> logar(String _usuario, String _senha) async {
     final Database db = await getDatabase();
     //final List<Map<String, dynamic>> resultado = await db.query(_tableName);
     //List<Login> users = _listar(resultado);
@@ -66,7 +66,7 @@ class LoginDao {
     //   if (users[i].usuario == usuario && users[i].senha == Senha) {
     var aux = db
         .rawQuery(
-          'Select Count(*) from $_tableName where $_usuario = "$usuario" and $_senha = "$Senha"',
+          'Select Count(*) from $_tableName where $_usuario = "$_usuario" and $_senha = "$_senha"',
         )
         .toString();
     print(aux);

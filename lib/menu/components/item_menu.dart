@@ -5,7 +5,12 @@ class DrawerListTile extends StatelessWidget {
   final IconData icone;
   final Widget press;
 
-  const DrawerListTile({Key? key, required this.title, required this.icone, required this.press}) : super(key: key);
+  const DrawerListTile({
+    Key? key,
+    required this.title,
+    required this.icone,
+    required this.press,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
