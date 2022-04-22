@@ -14,12 +14,12 @@ dependencies:
   sqflite:
   path:
   cupertino_icons: ^1.0.2
-  carousel_slider: ^4.0.0
   google_fonts: ^2.0.0
   flutter_svg: ^1.0.3
   fl_chart: ^0.50.1
   provider: ^6.0.2
   intl: ^0.17.0
+  charts_flutter:
 
 dev_dependencies:
   flutter_test:

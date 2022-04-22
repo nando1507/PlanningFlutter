@@ -1,5 +1,6 @@
-class TimeScrum {
-  final String valor;
+class Carta {
+  final String Camiseta;
+  final int Conta;
 
-  TimeScrum(this.valor);
+  Carta(this.Camiseta, this.Conta);
 }
