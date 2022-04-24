@@ -1,6 +1,6 @@
 class Carta {
-  final String Camiseta;
-  final int Conta;
+  final String camiseta;
+  final int conta;
 
-  Carta(this.Camiseta, this.Conta);
+  Carta(this.camiseta, this.conta);
 }
